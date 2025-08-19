@@ -8,14 +8,14 @@ from selenium.webdriver.common.by import By
 from geonamescache import GeonamesCache
 import os
 
-# ========= SETTINGS =========
+
 # GECKO_DRIVER_PATH = r"D:\scraping\scraping projects\selenium+bs4 infinte scroll\geckodriver-v0.36.0-win64\geckodriver.exe"
 FAILED_URLS_FILE = "merged_failed_urls.txt"
 FINAL_OUTPUT_FILE = "ycombinator_company_data.csv"
 RETRY_OUTPUT_FILE = "retry_data.csv"
 MAX_FOUNDERS = 3
 
-# ========= CITY DATABASE =========
+
 gc = GeonamesCache()
 cities = gc.get_cities()
 ALL_CITIES = {city['name'].lower() for city in cities.values()}
