@@ -5,7 +5,7 @@
 [The Y Combinator](https://www.ycombinator.com)
 startup directory contains valuable information on thousands of startups, including their industry, location, batch, and other key attributes. However, this data is scattered across multiple web pages and lacks a structured, easily analyzable format. Analysts, researchers, and enthusiasts struggle to extract insights about startup trends, geographic distribution, and sector growth efficiently.
 
-## Project Gials:
+## Project Goals:
 
 ### The goal of this project is to:
 
@@ -30,6 +30,28 @@ startup directory contains valuable information on thousands of startups, includ
 4. Provide insights into YC startup ecosystem trends for better understanding and decision-making.
    
 The project ultimately aims to help investors, analysts, and researchers understand the YC startup ecosystem in terms of growth, sector distribution, and founder impact.
+
+### [You can visit the public dashboard here]( https://public.tableau.com/app/profile/md.shakhawat.hossain7416/viz/StartupLandscapeDashboard20052025/StartupLandscapeDashboard20052025#1)
+
+# Key Findings from Analysis [Dashboard](https://public.tableau.com/app/profile/md.shakhawat.hossain7416/viz/StartupLandscapeDashboard20052025/StartupLandscapeDashboard20052025#1)
+
+1. Company Formation during COVID-19
+
+      * The highest number of companies were founded during 2020–2021, coinciding with the COVID-19 pandemic.
+
+2. Team Size by Company Type
+
+      * Public companies have a larger average team size compared to private or acquired companies.
+
+3. Serial Founders
+
+     * Approximately 250 founders have founded two or more companies.
+
+5. Top Founder by Number of Companies
+
+      * The founder with the highest number of companies is Jay Patel, who has founded 5 companies.
+
+
 
 ## Build from sources
 1. Clone the repo
