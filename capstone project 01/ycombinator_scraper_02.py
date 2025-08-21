@@ -4,7 +4,7 @@ import pandas as pd
 import os
 from multiprocessing import Pool
 from selenium import webdriver
-from selenium.webdriver.firefox.service import Service
+# from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from geonamescache import GeonamesCache
@@ -13,7 +13,7 @@ from geonamescache import GeonamesCache
 # GECKO_DRIVER_PATH = r"D:\scraping\scraping projects\selenium+bs4 infinte scroll\geckodriver-v0.36.0-win64\geckodriver.exe"
 INPUT_FILE = "company_urls.csv"
 MAX_FOUNDERS = 3
-NUM_WORKERS = 4  # Adjust based on your CPU cores it launches 4 processes simultaneously
+NUM_WORKERS = 4  # Adjust based on your CPU cores in my case i am launching 4 processes simultaneously
 CHUNK_SIZE = 50  # None for auto chunking based on NUM_WORKERS
 
 

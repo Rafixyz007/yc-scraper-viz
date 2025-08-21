@@ -151,16 +151,17 @@ for index, row in df.iterrows():
 
 driver.quit()
 
-# ========= SAVE RETRY DATA =========
-df.to_csv(RETRY_OUTPUT_FILE, index=False)
-print(f"Retry data saved to {RETRY_OUTPUT_FILE}")
+
+df.to_csv(RETRY_OUTPUT_FILE, index=False) # Save the retry data to a CSV file
+print(f"Retry data saved to {RETRY_OUTPUT_FILE}") # This will print the number of unique company URLs saved
 
 # ========= MERGE WITH FINAL OUTPUT =========
-if os.path.exists(FINAL_OUTPUT_FILE):
-    final_df = pd.read_csv(FINAL_OUTPUT_FILE)
-    merged_df = pd.concat([final_df, df], ignore_index=True)
-    merged_df.to_csv(FINAL_OUTPUT_FILE, index=False)
+if os.path.exists(FINAL_OUTPUT_FILE): # Check if the final output file exists
+    final_df = pd.read_csv(FINAL_OUTPUT_FILE) # Load the existing final output file
+    # Merge the new data with the existing final output
+    merged_df = pd.concat([final_df, df], ignore_index = True) # Concatenate the new data with the existing data
+    merged_df.to_csv(FINAL_OUTPUT_FILE, index=False) # Save the merged data to the final output file
     print(f"Final merged data saved to {FINAL_OUTPUT_FILE}")
 else:
-    df.to_csv(FINAL_OUTPUT_FILE, index=False)
+    df.to_csv(FINAL_OUTPUT_FILE, index=False) # If the final output file does not exist, save the current data as the final output
     print(f"Final data saved to {FINAL_OUTPUT_FILE}")
