@@ -89,7 +89,7 @@ Based on the analysis of the YC startup data, here are some key findings:
 
 ---
 
-## Dashboard Preview
+## [Dashboard Preview](https://public.tableau.com/app/profile/md.shakhawat.hossain7416/viz/StartupLandscapeDashboard20052025/StartupLandscapeDashboard20052025)
 
 ![Dashboard Preview](https://raw.githubusercontent.com/Rafixyz007/yc-scraper-viz/main/assets/dashboard.png)
 
