@@ -67,7 +67,7 @@ Based on the analysis of the YC startup data, here are some key findings:
 
 1.  Clone the repository:
     ```bash
-    git clone [https://github.com/Rafixyz007/yc-scraper-viz.git](https://github.com/Rafixyz007/yc-scraper-viz.git)
+    git clone https://github.com/Rafixyz007/yc-scraper-viz.git
     ```
 2.  Initialize and activate the virtual environment (for Windows):
     ```bash
