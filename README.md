@@ -78,4 +78,11 @@ pip install -r requirements.txt
 
 alternatively: check it here: https://github.com/Rafixyz007/yc-scraper-viz/blob/main/capstone%20project%2001/yc_company_data.csv
 
+
+
+## [Dashboard Preview](https://public.tableau.com/app/profile/md.shakhawat.hossain7416/viz/StartupLandscapeDashboard20052025/StartupLandscapeDashboard20052025)
+
+![Dashboard Preview](https://raw.githubusercontent.com/Rafixyz007/yc-scraper-viz/main/assets/dashboard.png)
+
+
     
