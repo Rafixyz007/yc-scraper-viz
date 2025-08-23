@@ -4,9 +4,9 @@
 
   <p>
     <img src="https://img.shields.io/badge/Project%20Status-Completed-green">
-    <img src="https://img.shields.io/badge/Python-blue">
-    <img src="https://img.shields.io/badge/Selenium-red">
-    <img src="https://img.shields.io/badge/Pandas-lightblue">
+    <img src="https://img.shields.io/badge/Python-3.9-blue">
+    <img src="https://img.shields.io/badge/Selenium-4.34.2-red">
+    <img src="https://img.shields.io/badge/Pandas-2.3.1-informational">
     <img src="https://img.shields.io/badge/Tableau-informational">
   </p>
 </div>
