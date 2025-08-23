@@ -16,7 +16,7 @@
 ## Table of Contents
 - [Problem Statement](#problem-statement)
 - [Project Goals](#project-goals)
-- [Key Findings](#Key-Findings-from-Analysis)
+- [Key Findings](#key-findings-from-analysis)
 - [Build From Sources](#build-from-sources)
 - [Dashboard Preview](#dashboard-preview)
 - [License](#license)
@@ -67,13 +67,13 @@ Based on the analysis of the YC startup data, here are some key findings:
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/Rafixyz007/yc-scraper-viz.git
+    git clone [https://github.com/Rafixyz007/yc-scraper-viz.git](https://github.com/Rafixyz007/yc-scraper-viz.git)
     ```
 2.  Initialize and activate the virtual environment (for Windows):
     ```bash
     source cap_project_01/Scripts/activate
     ```
-3.  Install dependencies:
+3.  Install dependencies from `requirements.txt`:
     ```bash
     pip install -r requirements.txt
     ```
@@ -90,11 +90,20 @@ Based on the analysis of the YC startup data, here are some key findings:
 
     # 4. it will scrape the failed urls
     python failed_urls_scraper_04.py 
+    ```
 
-    # 5. it will clean the data
+### Using Pandas for Data Cleaning
+After the scraping scripts have run, the data is collected and processed using the **Pandas** library within the `clean_data_05.ipynb` Jupyter Notebook. Pandas was used to:
+* **Load and merge** the scraped data from CSV files.
+* **Handle missing values** and incorrect data types.
+* **Extract meaningful insights**, such as the founding year from the batch name.
+* **Export the final cleaned dataset** to a single CSV file, ready for visualization in Tableau.
+
+5.  Run the data cleaning script:
+    ```bash
     jupyter notebook clean_data_05.ipynb
     ```
-5.  You will get a file named `"yc_company_data.csv"` containing all the scraped data.
+6.  You will get a file named `"yc_company_data.csv"` containing all the scraped data.
     * **Alternatively, check the file here:** [yc_company_data.csv](https://github.com/Rafixyz007/yc-scraper-viz/blob/main/capstone%20project%2001/yc_company_data.csv)
 
 ---
