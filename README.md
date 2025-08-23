@@ -1,5 +1,15 @@
-# YC Scraper & Dashboard
-Analyze and visualize Y Combinator startups by scraping their data and building an interactive dashboard.
+<div align="center">
+  <h1>YC Scraper & Dashboard</h1>
+  <p>Analyze and visualize Y Combinator startups by scraping their data and building an interactive dashboard.</p>
+
+  <p>
+    <img src="https://img.shields.io/badge/Project%20Status-Completed-green">
+    <img src="https://img.shields.io/badge/Python-blue">
+    <img src="https://img.shields.io/badge/Selenium-red">
+    <img src="https://img.shields.io/badge/Pandas-lightblue">
+    <img src="https://img.shields.io/badge/Tableau-informational">
+  </p>
+</div>
 
 ---
 
