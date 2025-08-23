@@ -6,7 +6,7 @@ Analyze and visualize Y Combinator startups by scraping their data and building 
 ## Table of Contents
 - [Problem Statement](#problem-statement)
 - [Project Goals](#project-goals)
-- [Key Findings](#key-findings)
+- [Key Findings](#Key-Findings-from-Analysis)
 - [Build From Sources](#build-from-sources)
 - [Dashboard Preview](#dashboard-preview)
 - [License](#license)
