@@ -104,7 +104,7 @@ After the scraping scripts have run, the data is collected and processed using t
     jupyter notebook clean_data_05.ipynb
     ```
 6.  You will get a file named `"yc_company_data.csv"` containing all the scraped data.
-    * **Alternatively, check the file here:** [yc_company_data.csv](https://github.com/Rafixyz007/yc-scraper-viz/blob/main/capstone%20project%2001/yc_company_data.csv)
+    * **Alternatively, check the file here:** [yc_company_data.csv](https://github.com/Rafixyz007/yc-scraper-viz/blob/main/capstone%20project%2001/source/yc_company_data.csv)
 
 ---
 
