@@ -78,5 +78,4 @@ pip install -r requirements.txt
 
 alternatively: check it here: https://github.com/Rafixyz007/yc-scraper-viz/blob/main/capstone%20project%2001/yc_company_data.csv
 
-
     
