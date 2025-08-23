@@ -114,6 +114,15 @@ After the scraping scripts have run, the data is collected and processed using t
 
 ---
 
+## About the Author
+**Md. Shakhawat Hossain**
+
+An aspiring Data Scientist passionate about leveraging data to solve complex problems and build impactful dashboards. This project showcases my foundational skills in data collection, cleaning, and visualization.
+
+-   [Email](shakhawat430007@gmail.com)
+
+---
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
