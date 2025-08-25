@@ -80,16 +80,16 @@ Based on the analysis of the YC startup data, here are some key findings:
 4.  Run the scraper scripts in the specified order:
     ```bash
     # 1. it will get all company urls
-    python url_collect_01.py 
+    python company_url_01.py 
 
     # 2. it will scrape the data
-    python ycombinator_scraper_02.py 
+    python company_data_02.py 
 
     # 3. it will merge all the failed urls
     python merge_failed_chunk_03.py 
 
     # 4. it will scrape the failed urls
-    python failed_urls_scraper_04.py 
+    python failed_company_data_04.py 
     ```
 
 ### Using Pandas for Data Cleaning
