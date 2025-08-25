@@ -110,7 +110,9 @@ After the scraping scripts have run, the data is collected and processed using t
 
 ## [Dashboard Preview](https://public.tableau.com/app/profile/md.shakhawat.hossain7416/viz/StartupLandscapeDashboard20052025/StartupLandscapeDashboard20052025)
 
-![Dashboard Preview](https://github.com/Rafixyz007/yc-scraper-viz/blob/main/Yc_scraper/assets/dashboard.png)
+![Dashboard_01 Preview](https://github.com/Rafixyz007/yc-scraper-viz/blob/main/Yc_scraper/assets/dashboard_01.png)
+![Dashboard_02 Preview](https://github.com/Rafixyz007/yc-scraper-viz/blob/main/Yc_scraper/assets/dashboard_02.png)
+
 
 ---
 
