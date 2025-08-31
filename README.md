@@ -16,7 +16,7 @@
 ## Table of Contents
 - [Problem Statement](#problem-statement)
 - [Project Goals](#project-goals)
-- [Key Findings](#key-findings-from-analysis)
+- [Key Findings](#-key-findings-from-analysis)
 - [Build From Sources](#build-from-sources)
 - [Dashboard Preview](#dashboard-preview)
 - [License](#license)
@@ -26,6 +26,8 @@
 ## Problem Statement
 
 The [Y Combinator](https://www.ycombinator.com) startup directory contains valuable information on thousands of startups, including their industry, location, batch, and other key attributes. However, this data is scattered across multiple web pages and lacks a structured, easily analyzable format. Analysts, researchers, and enthusiasts struggle to extract insights about startup trends, geographic distribution, and sector growth efficiently.
+In this project, data for **4,932 YC companies** was scraped, cleaned, and structured for analysis.
+
 
 ---
 
@@ -53,13 +55,26 @@ The project ultimately aims to help investors, analysts, and researchers underst
 
 ---
 
-## Key Findings from Analysis
-Based on the analysis of the YC startup data, here are some key findings:
 
-1.  **Company Formation during COVID-19:** The highest number of companies were founded during 2020–2021, coinciding with the COVID-19 pandemic.
-2.  **Team Size by Company Type:** Public companies have a larger average team size compared to private or acquired companies.
-3.  **Serial Founders:** Approximately 250 founders have founded two or more companies.
-4.  **Top Founder by Number of Companies:** The founder with the highest number of companies is Jay Patel, who has founded 5 companies.
+## 📊 Key Findings from Analysis
+
+- **Company Formation during COVID-19:**  
+  The highest number of YC companies were founded in **2020–2021**, coinciding with the global COVID-19 pandemic.  
+
+- **Team Size by Company Type:**  
+  **Public companies** have a significantly larger average team size compared to private or acquired companies.  
+
+- **Serial Founders:**  
+  Around **250 founders** have founded **two or more companies**, highlighting strong entrepreneurial repetition within YC.  
+
+- **Top Founder by Number of Companies:**  
+  **Jay Patel** stands out as the top founder, having founded **5 companies**.  
+
+- **Surge in Internet-based Startups (2019–2023):**  
+  Most YC-backed startups in this period were **online/internet-related**, reflecting the growing dominance of digital-first businesses.  
+
+- **Short-lived Categories:**  
+  Some industries (e.g., **3D Printing, Air Taxis, Airlines**) appeared briefly in the portfolio but did not sustain long-term growth.  
 
 ---
 
@@ -80,16 +95,16 @@ Based on the analysis of the YC startup data, here are some key findings:
 4.  Run the scraper scripts in the specified order:
     ```bash
     # 1. it will get all company urls
-    python company_url_01.py 
+    python company_url_scraper_01.py 
 
     # 2. it will scrape the data
-    python company_data_02.py 
+    python company_data_scraper_02.py 
 
     # 3. it will merge all the failed urls
     python merge_failed_chunk_03.py 
 
     # 4. it will scrape the failed urls
-    python failed_company_data_04.py 
+    python failed_company_data_scraper_04.py 
     ```
 
 ### Using Pandas for Data Cleaning
@@ -101,7 +116,7 @@ After the scraping scripts have run, the data is collected and processed using t
 
 5.  Run the data cleaning script:
     ```bash
-    jupyter notebook clean_data_05.ipynb
+    jupyter notebook data_preprocessing_05.ipynb
     ```
 6.  You will get a file named `"yc_company_data.csv"` containing all the scraped data.
     * **Alternatively, check the file here:** [yc_company_data.csv](https://github.com/Rafixyz007/yc-scraper-viz/blob/main/capstone%20project%2001/source/yc_company_data.csv)
