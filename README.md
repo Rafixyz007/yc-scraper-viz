@@ -18,6 +18,7 @@
 - [Project Goals](#project-goals)
 - [Key Findings](#-key-findings-from-analysis)
 - [Build From Sources](#build-from-sources)
+- [Workflow Overview](#workflow-overview)
 - [Dashboard Preview](#dashboard-preview)
 - [License](#license)
 
@@ -104,10 +105,81 @@ The project ultimately aims to help investors, analysts, and researchers underst
     python merge_failed_chunk_03.py 
 
     # 4. it will scrape the failed urls
-    python failed_company_data_scraper_04.py 
+    python failed_company_data_scraper_04.py
     ```
 
-### Using Pandas for Data Cleaning
+---
+
+## Workflow Overview
+
+Below is a diagram showing how the scraper processes YC company URLs:
+
+                    ┌────────────────────────────┐
+                    │ Input CSV: company_urls.csv│
+                    └─────────────┬─────────────┘
+                                  ▼
+                    ┌────────────────────────────┐
+                    │ Preprocess DataFrame       │
+                    │ - Extract company_name     │
+                    │ - Rename column            │
+                    │ - Initialize columns:      │
+                    │   founded_date, batch, ... │
+                    │   founder_1...founder_N    │
+                    └─────────────┬─────────────┘
+                                  ▼
+                    ┌────────────────────────────┐
+                    │ Split DataFrame into chunks│
+                    │ for parallel processing    │
+                    └─────────────┬─────────────┘
+                                  ▼
+                    ┌────────────────────────────┐
+                    │ Multiprocessing Pool       │
+                    │ - num_browser workers      │
+                    │ - Each worker runs         │
+                    │   scrape_chunk(chunk)      │
+                    └─────────────┬─────────────┘
+                                  ▼
+           ┌───────────────────────┴───────────────────────┐
+           │ scrape_chunk() processes each row (company)   │
+           └───────────────────────┬───────────────────────┘
+                                   ▼
+                   ┌─────────────────────────────────┐
+                   │ Per-company URL processing:     │
+                   │ - Retry page load up to 3 times │
+                   │ - Scrape fields:                │
+                   │   founded_date, batch, team_size│
+                   │   status, location, slogan      │
+                   │   website URL, types            │
+                   │   founders (up to max_founders) │
+                   │ - Update DataFrame row          │
+                   └─────────────┬───────────────────┘
+                                 ▼
+                   ┌───────────────────────────────┐
+                   │ After chunk finished:         │
+                   │ - Save chunk CSV:             │
+                   │   output_chunk_<id>.csv       │
+                   │ - Save failed URLs:           │
+                   │   failed_chunk_<id>.txt       │
+                   └─────────────┬─────────────────┘
+                                 ▼
+                   ┌───────────────────────────────┐
+                   │ Combine all chunk CSVs → final │
+                   │ CSV: ycombinator_company_data.csv │
+                   └─────────────┬─────────────────┘
+                                 ▼
+                   ┌───────────────────────────────┐
+                   │ Scraping Complete              │
+                   │ Failed URLs saved in failed_chunk_*.txt │
+                   └───────────────────────────────┘
+
+Legend / Notes:
+- max_founders : Maximum number of founder columns per company
+- num_browser  : Number of parallel browser processes
+- chunk CSV    : Intermediate CSV files for each chunk
+- failed_chunk_*.txt : List of URLs that failed for retry
+
+
+## Using Pandas for Data Cleaning
 After the scraping scripts have run, the data is collected and processed using the **Pandas** library within the `clean_data_05.ipynb` Jupyter Notebook. Pandas was used to:
 * **Load and merge** the scraped data from CSV files.
 * **Handle missing values** and incorrect data types.
