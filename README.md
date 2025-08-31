@@ -139,10 +139,10 @@ Below is a diagram showing how the scraper processes YC company URLs:
                     │   scrape_chunk(chunk)      │
                     └─────────────┬─────────────┘
                                   ▼
-           ┌───────────────────────┴───────────────────────┐
-           │ scrape_chunk() processes each row (company)   │
-           └───────────────────────┬───────────────────────┘
-                                   ▼
+          ┌───────────────────────┴───────────────────────┐
+          │ scrape_chunk() processes each row (company)   │
+          └───────────────────────┬───────────────────────┘
+                                  ▼
                    ┌─────────────────────────────────┐
                    │ Per-company URL processing:     │
                    │ - Retry page load up to 3 times │
