@@ -1,7 +1,6 @@
 import time
 import random
 import pandas as pd
-import os
 from multiprocessing import Pool
 from selenium import webdriver
 # from selenium.webdriver.firefox.service import Service
@@ -11,10 +10,10 @@ from geonamescache import GeonamesCache
 
 
 # GECKO_DRIVER_PATH = r"D:\scraping\scraping projects\selenium+bs4 infinte scroll\geckodriver-v0.36.0-win64\geckodriver.exe"
-INPUT_FILE = "company_urls.csv"
-MAX_FOUNDERS = 3
-NUM_WORKERS = 4  # Adjust based on your CPU cores in my case i am launching 4 processes simultaneously
-CHUNK_SIZE = 50  # None for auto chunking based on NUM_WORKERS
+input_file = "company_urls.csv"
+max_founders = 3
+num_browser = 4  # Adjust based on your CPU cores in my case i am launching 4 processes simultaneously
+chunk_size = 50  # None for auto chunking based on NUM_WORKERS
 
 
 gc = GeonamesCache() # Initialize GeonamesCache
@@ -75,7 +74,7 @@ def scrape_chunk(args): # Function to scrape a chunk of data
         
         founded_date = batch = team_size = status_text = location_text = slogan_text = company_website_url = "Not available" # Initialize variables
         company_types = []
-        founders = {f"founder_{i}": 'Not available' for i in range(1, MAX_FOUNDERS+1)} # Initialize founders dictionary
+        founders = {f"founder_{i}": 'Not available' for i in range(1, max_founders+1)} # Initialize founders dictionary
 
         # Extract data from the page using Selenium
         try:
@@ -161,7 +160,7 @@ def scrape_chunk(args): # Function to scrape a chunk of data
             # Founders
             try:
                 founder_elements = driver.find_elements(By.XPATH, '//div[@class="min-w-0 flex-1"]')
-                for i, element in enumerate(founder_elements[:MAX_FOUNDERS], start=1):
+                for i, element in enumerate(founder_elements[:max_founders], start=1):
                     founder_name = element.text.strip()
                     founders[f"founder_{i}"] = founder_name if founder_name else 'Not available'
             except:
@@ -181,7 +180,7 @@ def scrape_chunk(args): # Function to scrape a chunk of data
         chunk_df.at[index, 'slogan'] = slogan_text
         chunk_df.at[index, 'company_website_url'] = company_website_url
         chunk_df.at[index, 'company_types'] = ', '.join(company_types) if company_types else 'Not available'
-        for i in range(1, MAX_FOUNDERS+1): # Update founders data
+        for i in range(1, max_founders+1): # Update founders data
             chunk_df.at[index, f'founder_{i}'] = founders[f"founder_{i}"] # If founder is not available, it will remain 'Not available'
 
     driver.quit()
@@ -202,11 +201,11 @@ def scrape_chunk(args): # Function to scrape a chunk of data
 
 
 if __name__ == "__main__": # Main function to run the scraper
-    df = pd.read_csv(INPUT_FILE) # Read the input CSV file containing company URLs
+    df = pd.read_csv(input_file) # Read the input CSV file containing company URLs
     df['company_name'] = df['Company URL'].str.split('/').str[-1] # Extract company names from URLs  last part of the URL
     df = df.rename(columns={'Company URL': 'company_urls'}) # Rename the column
 
-    # Init columns
+    # Initialize new columns with default values
     df['founded_date'] = 'Not available'
     df['batch'] = 'Not available'
     df['team_size'] = 'Not available'
@@ -215,17 +214,17 @@ if __name__ == "__main__": # Main function to run the scraper
     df['slogan'] = 'Not available'
     df['company_website_url'] = 'Not available'
     df['company_types'] = 'Not available'
-    for i in range(1, MAX_FOUNDERS+1): # Initialize founder columns
+    for i in range(1, max_founders+1): # Initialize founder columns
         df[f'founder_{i}'] = 'Not available'
 
     # Split into chunks
     chunks = []
-    chunk_size = len(df) // NUM_WORKERS if CHUNK_SIZE is None else CHUNK_SIZE # Calculate chunk size based on number of workers or use provided CHUNK_SIZE
+    chunk_size = len(df) // num_browser if chunk_size is None else chunk_size # Calculate chunk size based on number of workers or use provided CHUNK_SIZE
     for i in range(0, len(df), chunk_size): # Create chunks of the DataFrame
         chunks.append((df.iloc[i:i+chunk_size].copy(), len(chunks))) # Append the chunk and its ID to the list
 
     # Run in parallel
-    with Pool(processes=NUM_WORKERS) as pool: # Create a pool of workers in my case 4
+    with Pool(processes=num_browser) as pool: # Create a pool of workers in my case 4
         output_files = pool.map(scrape_chunk, chunks) # Scrape each chunk in parallel
 
     # Combine

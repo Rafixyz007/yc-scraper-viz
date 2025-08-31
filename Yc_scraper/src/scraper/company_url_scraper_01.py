@@ -56,7 +56,7 @@ for tag in industry_tags: # Loop through each industry tag
         except:
             # No new elements loaded within timeout
             retries += 1
-            time.sleep(1)  # Give it a bit more time before next scroll
+            time.sleep(1)
 
     # Collect final company links
     cards = driver.find_elements(By.XPATH, '//a[@class="!py-4 _company_i9oky_355"]') # Find all company cards
