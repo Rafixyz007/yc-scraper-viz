@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>YC Scraper & Dashboard</h1>
+  <h1>Y Combinator Startup Analysis & Landscape Dashboard (2005–2025)</h1>
   <p>Analyze and visualize Y Combinator startups by scraping their data and building an interactive dashboard.</p>
 
   <p>
@@ -7,7 +7,10 @@
     <img src="https://img.shields.io/badge/Python-3.13-blue">
     <img src="https://img.shields.io/badge/Selenium-4.34.2-red">
     <img src="https://img.shields.io/badge/Pandas-2.3.1-informational">
-    <img src="https://img.shields.io/badge/Tableau-informational">
+    <a href="https://public.tableau.com/views/YourDashboardLink" target="_blank">
+  <img src="https://img.shields.io/badge/Tableau-View-blue?style=flat-square&logo=tableau&logoColor=white">
+</a>
+
   </p>
 </div>
 
@@ -55,6 +58,11 @@ The project ultimately aims to help investors, analysts, and researchers underst
 [**You can visit the public dashboard here**](https://public.tableau.com/app/profile/md.shakhawat.hossain7416/viz/StartupLandscapeDashboard20052025/StartupLandscapeDashboard20052025#1)
 
 ---
+
+## [Dashboard Preview](https://public.tableau.com/app/profile/md.shakhawat.hossain7416/viz/StartupLandscapeDashboard20052025/StartupLandscapeDashboard20052025)
+
+![Dashboard_01 Preview](https://github.com/Rafixyz007/yc-scraper-viz/blob/main/Yc_scraper/assets/dashboard_01.png)
+![Dashboard_02 Preview](https://github.com/Rafixyz007/yc-scraper-viz/blob/main/Yc_scraper/assets/dashboard_02.png)
 
 
 ## 📊 Key Findings from Analysis
@@ -195,13 +203,6 @@ After the scraping scripts have run, the data is collected and processed using t
 
 ---
 
-## [Dashboard Preview](https://public.tableau.com/app/profile/md.shakhawat.hossain7416/viz/StartupLandscapeDashboard20052025/StartupLandscapeDashboard20052025)
-
-![Dashboard_01 Preview](https://github.com/Rafixyz007/yc-scraper-viz/blob/main/Yc_scraper/assets/dashboard_01.png)
-![Dashboard_02 Preview](https://github.com/Rafixyz007/yc-scraper-viz/blob/main/Yc_scraper/assets/dashboard_02.png)
-
-
----
 
 ## About the Author
 **Md. Shakhawat Hossain**
