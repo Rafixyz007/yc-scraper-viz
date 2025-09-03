@@ -1,18 +1,13 @@
-<div align="center">
-  <h1>Y Combinator Startup Analysis & Landscape Dashboard (2005–2025)</h1>
-  <p>Analyze and visualize Y Combinator startups by scraping their data and building an interactive dashboard.</p>
+# Y Combinator Startup Analysis & Landscape Dashboard (2005–2025)
 
-  <p>
-    <img src="https://img.shields.io/badge/Project%20Status-Completed-green">
-    <img src="https://img.shields.io/badge/Python-3.13-blue">
-    <img src="https://img.shields.io/badge/Selenium-4.34.2-red">
-    <img src="https://img.shields.io/badge/Pandas-2.3.1-informational">
-    <a href="https://public.tableau.com/app/profile/md.shakhawat.hossain7416/viz/StartupLandscapeDashboard20052025/StartupLandscapeDashboard20052025#1" target="_blank">
-  <img src="https://img.shields.io/badge/Tableau-View-blue?style=flat-square&logo=tableau&logoColor=white">
-</a>
+Analyze and visualize Y Combinator startups by scraping their data and building an interactive dashboard.
 
-  </p>
-</div>
+[![Project Status](https://img.shields.io/badge/Project%20Status-Completed-green?style=flat-square)](#)
+[![Python](https://img.shields.io/badge/Python-3.13-blue?style=flat-square)](#)
+[![Selenium](https://img.shields.io/badge/Selenium-4.34.2-red?style=flat-square)](#)
+[![Pandas](https://img.shields.io/badge/Pandas-2.3.1-informational?style=flat-square)](#)
+[![View Dashboard](https://img.shields.io/badge/Tableau-View-blue?style=flat-square&logo=tableau&logoColor=white)](https://public.tableau.com/app/profile/md.shakhawat.hossain7416/viz/StartupLandscapeDashboard20052025/StartupLandscapeDashboard20052025#1)
+
 
 ---
 
