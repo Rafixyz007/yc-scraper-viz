@@ -19,10 +19,10 @@
 ## Table of Contents
 - [Problem Statement](#problem-statement)
 - [Project Goals](#project-goals)
+- [Dashboard Preview](#dashboard-preview)
 - [Key Findings](#-key-findings-from-analysis)
 - [Build From Sources](#build-from-sources)
 - [Workflow Overview](#workflow-overview)
-- [Dashboard Preview](#dashboard-preview)
 - [License](#license)
 
 ---
